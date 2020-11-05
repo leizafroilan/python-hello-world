@@ -1,0 +1,60 @@
+---
+CSR1000V-IOS-XE-1:
+
+  GigabitEthernet2:
+      description: 'Link1'
+      enable: no
+      ip: 192.168.1.1
+      mac: 255.255.255.0
+
+  GigabitEthernet3:
+      description: 'Link2'
+      enable: yes
+      ip: 192.168.2.1
+      mac: 255.255.255.0
+
+  GigabitEthernet4:
+      description: 'Link3'
+      enable: no
+      ip: 192.168.3.1
+      mac: 255.255.255.0
+
+CSR1000V-IOS-XE-2:
+
+    GigabitEthernet2:
+        description: 'Link1'
+        enable: no
+        ip: 10.10.2.1
+        mac: 255.255.255.0
+
+    GigabitEthernet3:
+        description: 'Link2'
+        enable: yes
+        ip: 10.10.3.1
+        mac: 255.255.255.0
+
+    GigabitEthernet4:
+        description: 'Link3'
+        enable: no
+        ip: 10.10.4.1
+        mac: 255.255.255.0
+
+CSR1000V-IOS-XE-3:
+
+    GigabitEthernet2:
+        description: 'Link1'
+        enable: no
+        ip: 10.20.2.1
+        mac: 255.255.255.0
+
+    GigabitEthernet3:
+        description: 'Link2'
+        enable: yes
+        ip: 10.20.3.1
+        mac: 255.255.255.0
+
+    GigabitEthernet4:
+        description: 'Link3'
+        enable: no
+        ip: 10.20.4.1
+        mac: 255.255.255.0

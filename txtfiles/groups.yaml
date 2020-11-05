@@ -1,0 +1,10 @@
+---
+
+cisco:
+    platform: 'ios'
+
+cissh:
+    platform: 'ios'
+
+csr1000v:
+    platform: 'ios'

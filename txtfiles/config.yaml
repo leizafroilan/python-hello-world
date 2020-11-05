@@ -1,0 +1,11 @@
+---
+inventory:
+    plugin: SimpleInventory
+    options:
+      host_file: "/home/froi/DevNet/txtfiles/hosts.yaml"
+      group_file: "/home/froi/DevNet/txtfiles/groups.yaml"
+      defaults_file: "/home/froi/DevNet/txtfiles/defaults.yaml"
+runner:
+    plugin: threaded
+    options:
+      num_workers: 100

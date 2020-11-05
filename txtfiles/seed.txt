@@ -1,0 +1,6 @@
+no access-list 101
+access-list 101 permit tcp NETA.2 0.0.0.0 any eq 80
+access-list 101 permit tcp NETB.0 0.0.0.255 any eq 20
+access-list 101 permit tcp NETC.5 0.0.0.0 any eq 21
+no access-list 102
+access-list 102 permit tcp any NETA.0 0.0.0.255 eq 80

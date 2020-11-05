@@ -1,0 +1,10 @@
+
+interface {{ interface }}
+  description {{ desc }}
+  ip address {{ ip }} {{ mac }}
+  {% if enable == True -%}
+  no shutdown
+  {% else -%}
+  shutdown
+  {% endif -%}
+  
