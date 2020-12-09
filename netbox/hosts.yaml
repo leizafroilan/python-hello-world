@@ -1,13 +1,4 @@
 
-CSR1000V-IOS-XE-2:
-    hostname: 192.168.10.232
-    platform: 'ios'
-    username: admin
-    password: cisco
-    groups:
-        - csr1000v
-    
-
 CSR1000V-IOS-XE-1:
     hostname: 192.168.10.231
     platform: 'ios'
@@ -17,8 +8,17 @@ CSR1000V-IOS-XE-1:
         - csr1000v
     
 
-CE-1:
-    hostname: 192.168.10.221
+CSR1000V-IOS-XE-2:
+    hostname: 192.168.10.232
+    platform: 'ios'
+    username: admin
+    password: cisco
+    groups:
+        - csr1000v
+    
+
+P-1:
+    hostname: 192.168.10.223
     platform: 'ios'
     username: admin
     password: cisco
@@ -35,17 +35,8 @@ P-2:
         - 7200
     
 
-CE-2:
-    hostname: 192.168.10.226
-    platform: 'ios'
-    username: admin
-    password: cisco
-    groups:
-        - 7200
-    
-
-P-1:
-    hostname: 192.168.10.223
+CE-1:
+    hostname: 192.168.10.221
     platform: 'ios'
     username: admin
     password: cisco
@@ -55,6 +46,24 @@ P-1:
 
 PE-1:
     hostname: 192.168.10.222
+    platform: 'ios'
+    username: admin
+    password: cisco
+    groups:
+        - 7200
+    
+
+PE-2:
+    hostname: 192.168.10.225
+    platform: 'ios'
+    username: admin
+    password: cisco
+    groups:
+        - 7200
+    
+
+CE-2:
+    hostname: 192.168.10.226
     platform: 'ios'
     username: admin
     password: cisco

@@ -14,6 +14,7 @@ def bkup():
     setdir()
     PATH = os.getcwd()
 
+    print("Performing backup...")
     nr = InitNornir("config.yaml")
 
     backup_files = nr.run(task=netmiko_send_command, command_string="show run")
@@ -35,5 +36,3 @@ def bkup():
             print("Error saving file for {}. Check {}/nornir.log".format(
                 each_host, PATH
             ))
-
-    input("\n\nPRess Enter to continue")

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os
 import netmiko
-import os
 from loadfile import setdir
 
 

@@ -5,6 +5,7 @@ import threading
 import time
 from cliscraping import automate
 import signal
+from loadfile import setdir
 import os
 
 if __name__ == "__main__":

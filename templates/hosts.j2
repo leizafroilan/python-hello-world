@@ -1,0 +1,13 @@
+
+{{ host }}:
+    hostname: {{ ip }}
+    platform: 'ios'
+    username: admin
+    password: cisco
+    {% if "CSR1000V" in host -%}
+    groups:
+        - csr1000v
+    {% else -%}
+    groups:
+        - 7200
+    {% endif -%}

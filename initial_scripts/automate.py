@@ -8,7 +8,7 @@ device = """
 192.168.1.222
 """.strip().splitlines()
 
-
+print(device)
 devices = {
     "device_type": "cisco_ios",
     "username": "admin",

@@ -1,0 +1,99 @@
+devices:
+
+  CSR1000V-IOS-XE-2:
+    connections:
+      cli:
+        ip: 192.168.10.232
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: admin
+      enable:
+        password: cisco
+    os: ios
+    type: ios
+
+  CSR1000V-IOS-XE-1:
+    connections:
+      cli:
+        ip: 192.168.10.231
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: admin
+      enable:
+        password: cisco
+    os: ios
+    type: ios
+
+  CE-1:
+    connections:
+      cli:
+        ip: 192.168.10.221
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: admin
+      enable:
+        password: cisco
+    os: ios
+    type: ios
+
+  P-2:
+    connections:
+      cli:
+        ip: 192.168.10.224
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: admin
+      enable:
+        password: cisco
+    os: ios
+    type: ios
+
+  CE-2:
+    connections:
+      cli:
+        ip: 192.168.10.226
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: admin
+      enable:
+        password: cisco
+    os: ios
+    type: ios
+
+  P-1:
+    connections:
+      cli:
+        ip: 192.168.10.223
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: admin
+      enable:
+        password: cisco
+    os: ios
+    type: ios
+
+  PE-1:
+    connections:
+      cli:
+        ip: 192.168.10.222
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco
+        username: admin
+      enable:
+        password: cisco
+    os: ios
+    type: ios
