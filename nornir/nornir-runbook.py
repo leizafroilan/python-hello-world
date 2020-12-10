@@ -21,7 +21,7 @@ def push_config(task):
 
     setdir()
 
-    df = pd.read_csv("new_file.csv")
+    df = pd.read_csv("seed.csv")
     df = df.loc[df["hostname"] == task.host.name]
     df.set_index("hostname", inplace=True)
 
@@ -72,4 +72,4 @@ if __name__ == "__main__":
 
         # Continues loop if input is invalid
         else:
-            print("Invalid Input")
+            pass

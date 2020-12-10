@@ -69,26 +69,32 @@ if __name__ == "__main__":
     # Loops selection while user is not pressing CTRL+C
     while True:
 
-        select = input("""1. Load config file\n2. Convert config file to Cisco commands
-3. Deploy config file to Cisco devices\n""")
+        select = input(
+            """1. Load config file\n2. Convert config file to Cisco commands
+3. Deploy config file to Cisco devices\n"""
+        )
 
         os.system("clear")
 
         # Calls load_seed function
-        if select == '1':
+        if select == "1":
             load_seed()
         # Calls generate_seed function
-        elif select == '2':
+        elif select == "2":
             generate_seed()
         # Calls run function
-        elif select == '3':
+        elif select == "3":
             start = time.perf_counter()
             threads = ThreadPool(args.threads_num)
             threads.map(run, hosts)
             threads.close
             threads.join
             end = time.perf_counter()
-            input("\n\nFinished in {} seconds. Press Enter to continue".format(round(end-start, 3)))
+            input(
+                "\n\nFinished in {} seconds. Press Enter to continue".format(
+                    round(end - start, 3)
+                )
+            )
             os.system("clear")
         # Continues loop if input is invalid
         else:

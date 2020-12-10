@@ -1,6 +1,6 @@
 ---
 
-cisco:
+7200:
     platform: 'ios'
 
 cissh:

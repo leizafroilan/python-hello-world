@@ -6,14 +6,17 @@ import os
 from loadfile import setdir
 import signal
 
+
 # Catches keyboard interrupts
 signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
 # Dictionary to build ConnectHandler parameters
-host = {"device_type": "cisco_ios"}
-host["username"] = credentials.uid()
-host["password"] = credentials.pw()
+host = {
+        "device_type": "cisco_ios",
+        "username": credentials.uid(),
+        "password": credentials.pw()
+        }
 
 # Calls function to set current working directory to txtfiles
 setdir()
@@ -22,7 +25,7 @@ setdir()
 with open("H-list") as f:
     devices = f.read().strip().splitlines()
 
-# Extracts device command from commands.txt file and stores to variable/list  cmds
+# Extracts device command from commands.txt file and stores to cmds
 with open("commands") as f:
     cmds = f.read().strip().splitlines()
 

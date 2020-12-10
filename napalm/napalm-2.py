@@ -8,7 +8,6 @@ import loadfile
 
 if __name__ == "__main__":
 
-
     # Catches keyboard interrupts
     signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     signal.signal(signal.SIGINT, signal.SIG_DFL)

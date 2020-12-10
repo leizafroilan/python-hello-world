@@ -9,7 +9,6 @@ import loadfile
 
 if __name__ == "__main__":
 
-
     # Catches keyboard interrupts
     signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     signal.signal(signal.SIGINT, signal.SIG_DFL)
@@ -17,7 +16,6 @@ if __name__ == "__main__":
     # Uses environment variables stored on ~/.bash_profile
     uid = os.environ.get("RT_USERNAME")
     pw = os.environ.get("RT_PASS")
-
 
     # Calls function to set working directory to txtfiles
     loadfile.setdir()
@@ -75,7 +73,7 @@ if __name__ == "__main__":
             else:
                 print("Command is invalid")
 
-        except:
-            continue
+        except Exception as e:
+            print(e)
 
         input("\n\n<<<Press Enter to continue>>>")

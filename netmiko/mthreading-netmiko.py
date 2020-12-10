@@ -19,7 +19,6 @@ if __name__ == "__main__":
     # Calls function to set current working directory to txtfiles
     setdir()
 
-
     # Extracts device list from H-list.txt and stores in variable/list device
     with open("H-list") as f:
         devices = f.read().strip().splitlines()
@@ -37,7 +36,6 @@ if __name__ == "__main__":
         thread.join()
 
     finish = time.perf_counter()
-
 
     print("\n\nCheck output on {}".format(os.getcwd()))
     print("\n\nFinished in", round(finish - start, 3), "second(s)")

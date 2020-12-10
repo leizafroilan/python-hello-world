@@ -16,8 +16,12 @@ optional arguments:
 
 # Checks if correct argument is passed. Takes -s as argument
 # Example: nasa_api -s "mars rover"
-parser = argparse.ArgumentParser(description="NASA API - takes search string as argument")
-parser.add_argument("-s", "--search", help="add search string as argument", type=str)
+parser = argparse.ArgumentParser(
+    description="NASA API - takes search string as argument"
+)
+parser.add_argument(
+    "-s", "--search", help="add search string as argument", type=str
+)
 args = parser.parse_args()
 
 # NASA API
@@ -35,9 +39,11 @@ for source in sources:
     for d in data:
 
         # Loops on every data
-        print("\nTitle: {}\nDescription: {}\nDate Created:{}\n ".format(
-            d["title"], d["description"], d["date_created"],
-        ))
+        print(
+            "\nTitle: {}\nDescription: {}\nDate Created:{}\n ".format(
+                d["title"], d["description"], d["date_created"],
+            )
+        )
 
     # Gets all links from each data
     links = requests.get(href).json()
