@@ -21,13 +21,15 @@ def testbed(_list):
 
     os.system("clear")
 
+    path = os.environ.get("workdir")
+    os.chdir(path)
+
     testbed_temp = "/home/froi/DevNet/templates/testbed.j2"
     hosts_temp = "/home/froi/DevNet/templates/hosts.j2"
     testbed_configs = ""
     hosts_configs = ""
 
-    path = os.environ.get("workdir")
-    os.chdir(path)
+
 
     # Reads jinja template
     with open(testbed_temp, "r") as f:

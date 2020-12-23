@@ -33,8 +33,6 @@ while True:
         vlan = "no vlan {}".format(vlan_id)
 
     else:
-        print("Invalid Input")
-        input("\n\nPress Enter to continue\n\n")
         continue
 
     payload = {

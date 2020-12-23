@@ -1,0 +1,121 @@
+CSR1000v Host: ios-xe-mgmt.cisco.com
+SSH Port: 22
+NETCONF Port: 10000
+RESTCONF Ports: 443 (HTTPS)
+Username: developer
+Password: C1sco12345
+
+
+# Get memory statistics
+
+<get
+	xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+	<filter>
+		<memory-statistics
+			xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-memory-oper">
+			<memory-statistic/>
+		</memory-statistics>
+	</filter>
+</get>
+
+# Add Loopback interface
+
+<config>
+	<interfaces
+		xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+		<interface>
+			<name>Loopback100</name>
+			<description>Test Only</description>
+			<type
+				xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">
+	  ianaift:softwareLoopback
+
+			</type>
+			<enabled>true</enabled>
+			<ipv4
+				xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+				<address>
+					<ip>99.99.99.9</ip>
+					<netmask>255.255.255.255</netmask>
+				</address>
+			</ipv4>
+		</interface>
+	</interfaces>
+</config>
+
+# Edit Physical interface
+
+<config>
+	<interfaces
+		xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+		<interface>
+			<name>GigabitEthernet2</name>
+			<description>TestOnly</description>
+			<enabled>true</enabled>
+			<type
+				xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">
+				ianaift:ethernetCsmacd
+
+			</type>
+			<ipv4
+				xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+				<address>
+					<ip>172.16.0.1</ip>
+					<netmask>255.255.255.0</netmask>
+				</address>
+			</ipv4>
+		</interface>
+	</interfaces>
+</config>
+
+# Get interface
+
+<filter>
+	<interfaces
+		xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+		<interface>
+			<name></name>
+			<description></description>
+			<enabled></enabled>
+			<ipv4
+				xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+				<address>
+					<ip></ip>
+					<netmask></netmask>
+				</address>
+			</ipv4>
+		</interface>
+	</interfaces>
+</filter>
+
+# Get hostname
+
+<filter>
+	<native
+		xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+		<hostname></hostname>
+	</native>
+</filter>
+
+# Get username
+
+<filter>
+	<native
+		xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+		<username>
+			<secret/>
+			<name/>
+		</username>
+	</native>
+</filter>
+
+#Delete loopback interface
+
+<config>
+	<interfaces
+		xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+		<interface operation="delete">
+			<name>Loopback100</name>
+		</interface>
+	</interfaces>
+</config>

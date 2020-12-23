@@ -37,13 +37,13 @@ response = requests.post(
 ).json()
 
 # Parses response to get interface details
-intf = response["ins_api"]["outputs"]["output"]["body"]["TABLE_intf"][
+interfaces = response["ins_api"]["outputs"]["output"]["body"]["TABLE_intf"][
     "ROW_intf"
 ]
 
 print("Getting interface for sbx-nxos-mgmt.cisco.com")
 
-for interface in intf:
+for interface in interfaces:
     print(
         "VRF Name: {}\nInterface Name: {}\nLink State: {}\nAdmin State: {}\nPrefix: {}".format(
             interface["vrf-name-out"],
